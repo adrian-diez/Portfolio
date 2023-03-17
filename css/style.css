@@ -5,3 +5,9 @@
 html{
   background:linear-gradient(135deg, #157FC4, #020D15)
 }
+
+.cta-btn {
+  min-width: max-content;
+  background: #058f62;
+  height: 20px;
+}
