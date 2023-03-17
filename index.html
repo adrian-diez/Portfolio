@@ -10,34 +10,70 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Adrian Diez</title>
 </head>
-<body>
+<body style="height:100vh; margin:0">
   <header>
-    <div id="header">
+    <div id="header" style="position:sticky; top:0; left:0; height:12.5%;display:flex;align-items: center; justify-content: space-between;padding:12px;background:#021C2C; color:#058F62">
       <div id="logo">
-
-        logo
+        <div id="logo-wrapper">
+          <img src="images/my-logo.png" alt="logo de la página web" style="height:65px;aspect-ratio:1.3/1">
+        </div>
       </div>
       <div id="navbar">
-        navbar
+        <ul style="display: flex; flex-direction: row; list-style-type: none; gap:10px;">
+          <li>Home</li>
+          <li>Work</li>
+          <li>About</li>
+        </ul>
 
       </div>
     </div>
   </header>
   <section id="intro">
-    name
-    info
-    photo/video
-    CTA
+    <article id="intro-container">
+      <div id="name-container">
+        <h1 id="name">
+          ADRIÁN <br> DÍEZ
+        </h1>
+      </div>
+      <div id="description-container">
+        <ul>
+          <li>Full Stack Programmer</li>
+          <li>Front and Back End Developer</li>
+          <li>Data Analyst</li>
+        </ul>
+      </div>
+      <div id="photo-container">
+        photo/video
+      </div>
+      <div id="cta-container">
+        <div class="cta-btn">Explorar</div>
+        <div class="cta-btn">Contrata mis servicios</div>
+      </div>
+    </article>
   </section>
   <section id="news">
-    ajax call and something else?
+    <div>
+      <h2 id="news-title">
+        GPT-4 destroza a ChatGPT en exámenes universitarios, ¿pero realmente importa?
+      </h2>
+      <h4 id="news-subtitle">
+        Según OpenAI, GPT-4 es todavía mejor que ChatGPT para aprobar exámenes universitarios y de posgrado. Un logro impactante, sin dudas, pero que al final del día sigue sin importar demasiado.
+      </h4>
+      <div class="cta-btn">Leer más</div>
+
+
+    </div>
   </section>
   <section id="prod-present">
-    
+    <h2>Descubre algunos de mis proyectos</h2>
   </section>
-  <section id="sitios-de-interes"></section>
+  <section id="sitios-de-interes">
+    <h2>Sitios de interés</h2>
+  </section>
   <footer>
-    
+    <div id="footer-container" style="position:fixed; top:0; left:0; height:12.5%;display:flex;align-items: center; justify-content: space-between;padding:12px;background:#021C2C; color:#058F62">
+      
+    </div>
   </footer>
 </body>
 </html>
