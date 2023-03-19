@@ -1,9 +1,31 @@
+:root {
+  --primary-light-2: #157FC4;
+  --primary-light: #0D5886;
+  --primary: #0B3F60;
+  --primary-dark: #021C2C;
+  --primary-dark-2: #020D15;
+
+  --secondary-light-2: #0AC88A;
+  --secondary-light: #058F62;
+  --secondary: #056445;
+  --secondary-dark: #002E1F;
+  --secondary-dark-2: #00150F;
+
+  --tertiary-light-2: #2243CB;
+  --tertiary-light: #172F92;
+  --tertiary: #112266;
+  --tertiary-dark: #050D2F;
+  --tertiary-dark-2: #030716;
+
+}
+
+
 * {
   font-family: 'Spectral', 'Montserrat';
 }
 
 html{
-  background:linear-gradient(135deg, #157FC4, #020D15)
+  background:linear-gradient(135deg, var(--primary-light-2), var(--primary-dark-2))
 }
 
 a {
@@ -12,16 +34,16 @@ a {
 
 .cta-btn {
   min-width: max-content;
-  background: #058f62;
+  background: var(--secondary-light);
   height: 25px;
   display: inline-block;
   padding: 5px;
   border-radius: 6px;
-  box-shadow: inset -2px -2px #002e1f;
+  box-shadow: inset -2px -2px var(--secondary-dark);
 }
 
 .cta-btn:hover {
-  background: #0ac884;
+  background: var(--secondary-light-2);
   cursor: pointer;
   transition: background 0.3s ease;
 }
