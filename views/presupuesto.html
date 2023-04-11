@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body style="margin:0">
+    <header>
+      <div id="header" style="position:sticky; top:0; left:0; height:12.5%;display:flex;align-items: center; justify-content: space-between;padding:12px;background:#021C2C; color:#058F62">
+        <div id="logo">
+          <div id="logo-wrapper">
+            <img src="../images/my-logo.png" alt="logo de la página web" style="height:65px;aspect-ratio:1.3/1">
+          </div>
+        </div>
+        <div id="navbar">
+          <ul style="display: flex; flex-direction: row; list-style-type: none; gap:10px;">
+            <li>Home</li>
+            <li>Work</li>
+            <li>About</li>
+          </ul>
+  
+        </div>
+      </div>
+    </header>
+    <section id="contact-data">
+      <article id="contact-data-container" style="width:80vw;background:#021C2C;margin-right: 10vw;
+      margin-top: 40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+        <div id="title-container" style="margin-top: 40px; padding: 12px; color:#058F62">
+          <h1>¿Quién eres?</h1>
+        </div>
+        <div id="contact-form-container">
+          <form action="#">
+            <label for="name">Nombre</label>
+            <input type="text" id="name">
+            <br>
+            <label for="surname">Apellido</label>
+            <input type="text" id="surname">
+            <br>
+            <label for="phone">Teléfono</label>
+            <input type="tel">
+            <br>
+            <label for="email">Correo electrónico</label>
+            <input type="email">
+          </form>
+        </div>
+      </article>
+    </section>
+    <section id="budget">
+      <article id="contact-data-container" style="width:80vw;background:#021C2C;margin-right: 10vw;
+      margin-top: 40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+        <div id="title-container" style="margin-top: 40px; padding: 12px; color:#058F62">
+          <h1>¿Quién eres?</h1>
+        </div>
+        <div id="budget-form-container">
+          <form action="#">
+            <label for="product">Producto</label>
+            <select name="product" id="product">
+              <option value="default" default disabled>Selecciona una opción</option>
+              <option value="bug-fix">Arreglar errores en mi código</option>
+              <option value="small-project">Crear un projecto sencillo con HTML y CSS</option>
+              <option value="medium-project">Crear un projecto sencillo con HTML,CSS y JavaScript/JQuery</option>
+              <option value="big-project">Crear un projecto de más de una página</option>
+            </select>
+            <br>
+            <label for="time">Plazo</label>
+            <input type="number" id="time">
+            <select name="period" id="period">
+              <option value="days">días</option>
+              <option value="weeks">semanas</option>
+              <option value="months">meses</option>
+            </select>
+            <br>
+            <label for="extras">Extras</label>
+            <input type="checkbox" name="" id="">
+            <br>
+            <label for="email">Correo electrónico</label>
+            <input type="email">
+          </form>
+        </div>
+      </article>
+    </section>
+    <footer>
+     
+      <div id="footer-container" style="width:100vw;display:flex;align-items: center; justify-content: space-around;padding:12px;background:#021C2C; color:#058F62;margin-top:12px;">
+        <div id="footer-enlaces">
+          <h5>Enlaces útiles</h5>
+          <ul>
+            <li>Aviso legal</li>
+            <li>Términos y condiciones</li>
+            <li>Política de cookies</li>
+            <li>Política de privacidad</li>
+          </ul>
+        </div>
+        <div id="footer-direccion">
+          <h5>
+            Dónde encontrarme
+          </h5>
+          <p style="color:#058F62;">
+            Avenida Príncipe de Asturias, 6 <br>
+            Portal 8,1º B <br>
+            Villaviciosa de Odón <br>
+            28670 Madrid
+            
+          </p>
+        </div>
+        <div id="footer-logos" style="display: flex;">
+          <img src="images/socials/instagram.svg" alt="logo instagram" style="height:30px">
+          <img src="images/socials/twitter.svg" alt="logo twitter" style="height:30px">
+          <img src="images/socials/github.svg" alt="logo github" style="height:30px">
+        </div>
+        
+      </div>
+    </footer>
+  </body>
+</html>
