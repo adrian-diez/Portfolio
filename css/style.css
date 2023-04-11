@@ -17,6 +17,7 @@
   --tertiary-dark: #050D2F;
   --tertiary-dark-2: #030716;
 
+  --alert: #ff0000;
 }
 
 
@@ -30,6 +31,10 @@ html{
 
 a {
   color: #000;
+}
+
+label {
+  color:var(--secondary-light)
 }
 
 .cta-btn {
@@ -122,4 +127,24 @@ a {
 
 .no-cssanimations .cb-slideshow li span {
 	opacity: 1;
+}
+
+
+#title-container, #budget-title-container {
+  padding: 1 em;
+  color: var(--secondary-light-2)
+}
+
+#budget-container, #contact-data-container {
+  padding: 1em 1em 2em 1em;
+}
+
+:is(#contact-data, #budget) :is(input,select) {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid var(--secondary-light);
+  color: var(--secondary-light-2)
 }
