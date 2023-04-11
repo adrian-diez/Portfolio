@@ -14,7 +14,9 @@
       <div id="header" style="position:sticky; top:0; left:0; height:12.5%;display:flex;align-items: center; justify-content: space-between;padding:12px;background:#021C2C; color:#058F62">
         <div id="logo">
           <div id="logo-wrapper">
-            <img src="../images/my-logo.png" alt="logo de la página web" style="height:65px;aspect-ratio:1.3/1">
+            <a href="../index.html">
+              <img src="../images/my-logo.png" alt="logo de la página web" style="height:65px;aspect-ratio:1.3/1">
+            </a>
           </div>
         </div>
         <div id="navbar">
@@ -28,12 +30,11 @@
       </div>
     </header>
     <section id="contact-data">
-      <article id="contact-data-container" style="width:80vw;background:#021C2C;margin-right: 10vw;
-      margin-top: 40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
-        <div id="title-container" style="margin-top: 40px; padding: 12px; color:#058F62">
+      <article id="contact-data-container" style="width:80vw;background:#021C2C;margin:40px auto;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+        <div id="title-container">
           <h1>¿Quién eres?</h1>
         </div>
-        <div id="contact-form-container">
+        <div id="contact-form-container" class="budget-form">
           <form action="#">
             <label for="name">Nombre</label>
             <input type="text" id="name">
@@ -51,20 +52,19 @@
       </article>
     </section>
     <section id="budget">
-      <article id="contact-data-container" style="width:80vw;background:#021C2C;margin-right: 10vw;
-      margin-top: 40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
-        <div id="title-container" style="margin-top: 40px; padding: 12px; color:#058F62">
-          <h1>¿Quién eres?</h1>
+      <article id="budget-container" style="width:80vw;background:#021C2C; margin:40px auto;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+        <div id="budget-title-container">
+          <h1>¿Qué necesitas?</h1>
         </div>
-        <div id="budget-form-container">
+        <div id="budget-form-container" class="budget-form">
           <form action="#">
             <label for="product">Producto</label>
             <select name="product" id="product">
               <option value="default" default disabled>Selecciona una opción</option>
               <option value="bug-fix">Arreglar errores en mi código</option>
-              <option value="small-project">Crear un projecto sencillo con HTML y CSS</option>
-              <option value="medium-project">Crear un projecto sencillo con HTML,CSS y JavaScript/JQuery</option>
-              <option value="big-project">Crear un projecto de más de una página</option>
+              <option value="small-project">Crear un proyecto sencillo con HTML y CSS</option>
+              <option value="medium-project">Crear un proyecto sencillo con HTML,CSS y JavaScript/JQuery</option>
+              <option value="big-project">Crear un proyecto de más de una página</option>
             </select>
             <br>
             <label for="time">Plazo</label>
@@ -75,11 +75,24 @@
               <option value="months">meses</option>
             </select>
             <br>
-            <label for="extras">Extras</label>
-            <input type="checkbox" name="" id="">
+            <br>
+            <label for="extras">Extras</label> <br>
+            <input type="checkbox" name="revisions" id="revisions">
+            <label for="revisions">Revisiones de contenido</label>
+            &emsp;
+            <input type="checkbox" name="meetings" id="meetings">
+            <label for="meetings">Reuniones diarias</label>
+            &emsp;
+            <input type="checkbox" name="documentation" id="documentation">
+            <label for="documentation">Realización de documentación</label>
+            <br>
             <br>
             <label for="email">Correo electrónico</label>
             <input type="email">
+            <br>
+            <br>
+            <input type="checkbox" name="t-and-a" id="t-and-a">
+            <label for="t-and-a">He leído y comprendo la <a style="color:var(--secondary-light-2)">política de privacidad</a>.</label>
           </form>
         </div>
       </article>
