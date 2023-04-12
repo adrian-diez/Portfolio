@@ -6,7 +6,7 @@ const inputs = {
     email: '',
     product: '',
     time: '',
-    period: '',
+    period: 'days',
     revisions: false,
     meetings: false,
     documentation: false,
@@ -15,6 +15,20 @@ const inputs = {
 
 const products = ['bug-fix', 'small-project', 'medium-project', 'big-project']
 const extras = ['revisions', 'meetings', 'documentation']
+
+const dateTable = {
+    days: 7,
+    weeks: 50,
+    months: 100
+   }
+
+const productTable = {
+    'bug-fix': 50,
+    'small-project': 100,
+    'medium-project': 300,
+    'big-project': 1200
+}
+
 
 //When you select any input field, add its value to const inputs.
 //If it changes the budget (product, time,extras) show it under "PRESUPUESTO FINAL"
@@ -54,7 +68,9 @@ $('#product').change(() => {
     })
 
     //add the product we need
-    $('#budget-final').append(`<p class="${value}">${label}</p>`)
+    $('#concepts').append(`<p class="${value}">${label}</p>`)
+    $('#pricing').append(`<p class="${value}">${productTable[value]}€</p>`)
+
 })
 
 //extras
@@ -66,7 +82,8 @@ extras.forEach(elem => {
 
         //add line if true, remove if false
         if (inputs[elem]) {
-            $('#budget-final').append(`<p class="${elem}">Extra: ${$(`label[for=${elem}]`)[0].innerText}</p>`)
+            $('#concepts').append(`<p class="${elem}">Extra: ${$(`label[for=${elem}]`)[0].innerText}</p>`)
+            $('#pricing').append(`<p class="${elem}">25€</p>`)
         }
         else {
             $(`.${elem}`).remove()
@@ -76,15 +93,27 @@ extras.forEach(elem => {
 })
 
 //deadline
+$('#time, #period').change(() => {
+  
+    //delete any previous deadlines from budget
+    $('.deadline').remove()
+    
+    let timeNumber = parseInt(inputs.time)
+    let timePeriod = parseInt(dateTable[inputs.period])
+    let price = 200 - (timePeriod*timeNumber) + 100
+
+    price < 100 ? price = 100 : price
+
+    //add the product we need
+    $('#concepts').append(`<p class="deadline">${inputs.time} ${inputs.period}</p>`)
+    $('#pricing').append(`<p class="deadline">${price}€</p>`)
+
+})
 
 
 //add price to budget like this:
 //
-//const dateTable = {
-//  days: 1,
-//  weeks: 7,
-//  months: 30
-//}
+
 //
 //let datePrice = number * parseInt(inputs.time) / dateTable[inputs.period]
 //number being the price that I charge for a day's work. Need a constant to make the slope less sharp

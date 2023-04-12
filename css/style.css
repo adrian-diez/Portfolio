@@ -163,6 +163,7 @@ label {
   color: var(--secondary-light-2)
 }
 
+
 :is(#contact-data, #budget) option {
   background: var(--primary-dark);
 }

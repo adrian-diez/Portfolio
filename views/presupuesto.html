@@ -62,7 +62,7 @@
           <form action="#">
             <label for="product">Producto</label>
             <select name="product" id="product">
-              <option value="default" default disabled>Selecciona una opción</option>
+              <option value="default" selected disabled>Selecciona una opción</option>
               <option value="bug-fix">Arreglar errores en mi código</option>
               <option value="small-project">Crear un proyecto sencillo con HTML y CSS</option>
               <option value="medium-project">Crear un proyecto sencillo con HTML,CSS y JavaScript/JQuery</option>
@@ -90,14 +90,24 @@
             <label for="documentation">Realización de documentación</label>
             <br>
             <br>
-            <div id="budget-final" style="color:#058F62; margin:2em">
+            <section id="budget-final" style="position:relative; color:#058F62; margin:2em; min-height:10em">
               <h3 class="secondary-2">PRESUPUESTO FINAL</h3>
-              
+              <div id="concepts">
+                <h4>CONCEPTO</h4>
+              </div>
+              <div id="pricing">
+                <h4>PRECIO</h4>
+              </div>
+              <div id="total-price">
+                <h3>TOTAL:</h3>
+              </div>
+            </section>
+            <br>
+            <br>
+            <div style="display:inline-flex">
+              <input type="checkbox" name="t-and-c" id="t-and-c" style="display:block">
+              <label for="t-and-c">He leído y comprendo la <a style="color:var(--secondary-light-2)">política de privacidad</a>.</label>
             </div>
-            <br>
-            <br>
-            <input type="checkbox" name="t-and-c" id="t-and-c">
-            <label for="t-and-c">He leído y comprendo la <a style="color:var(--secondary-light-2)">política de privacidad</a>.</label>
             <br>
             <br>
             <button type="submit" class="cta-btn form-btn">Enviar formulario</button>
