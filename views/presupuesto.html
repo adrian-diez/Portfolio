@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js" defer></script>
 </head>
 <body style="margin:0">
     <header>
@@ -30,7 +32,7 @@
       </div>
     </header>
     <section id="contact-data">
-      <article id="contact-data-container" style="width:80vw;background:#021C2C;margin:40px auto;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+      <article id="contact-data-container" style="width:50vw;background:#021C2C;margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
         <div id="title-container">
           <h1>¿Quién eres?</h1>
         </div>
@@ -43,16 +45,16 @@
             <input type="text" id="surname">
             <br>
             <label for="phone">Teléfono</label>
-            <input type="tel">
+            <input type="tel" id="phone">
             <br>
             <label for="email">Correo electrónico</label>
-            <input type="email">
+            <input type="email" id="email">
           </form>
         </div>
       </article>
     </section>
     <section id="budget">
-      <article id="budget-container" style="width:80vw;background:#021C2C; margin:40px auto;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+      <article id="budget-container" style="width:50vw;background:#021C2C; margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
         <div id="budget-title-container">
           <h1>¿Qué necesitas?</h1>
         </div>
@@ -68,7 +70,7 @@
             </select>
             <br>
             <label for="time">Plazo</label>
-            <input type="number" id="time">
+            <input type="number" id="time" style="width:2em; text-align: center;">
             <select name="period" id="period">
               <option value="days">días</option>
               <option value="weeks">semanas</option>
@@ -87,18 +89,42 @@
             <label for="documentation">Realización de documentación</label>
             <br>
             <br>
-            <label for="email">Correo electrónico</label>
-            <input type="email">
+            <div id="budget-final" style="color:#058F62; margin:2em">
+              <h3 class="secondary-2">PRESUPUESTO FINAL</h3>
+              
+            </div>
             <br>
             <br>
             <input type="checkbox" name="t-and-a" id="t-and-a">
             <label for="t-and-a">He leído y comprendo la <a style="color:var(--secondary-light-2)">política de privacidad</a>.</label>
+            <br>
+            <br>
+            <button type="submit" class="cta-btn form-btn">Enviar formulario</button>
           </form>
         </div>
       </article>
     </section>
+
+    <section id="advert">
+      <article id="advert-container" style="width:35vw;position:absolute; top: 10em; right: -1em; background:#021C2C; margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+        <div id="advert-title-container" style="text-align: center;">
+          <h1>¡Contrata mis servicios!</h1>
+        </div>
+        <section id="advert-desc">
+          <h3>Tengo una amplia selección de servicios a tu alcance.</h3>
+          <h3>Tan solo rellena el cuestionario de la izquierda y te responderé lo antes posible.</h3>
+
+          <h2>¡Totalmente sin compromiso!</h2>
+
+          <h2>¿A qué esperas?</h2>
+
+          <h4>¿Aún no estás convencido o no sabes qué pedir?</h4>
+          <h3>Pásate por mi <a>galería de proyectos aquí</a>. Puede que algo te llame la atención.</h3>
+        </section>
+      </article>
+    </section>
+
     <footer>
-     
       <div id="footer-container" style="width:100vw;display:flex;align-items: center; justify-content: space-around;padding:12px;background:#021C2C; color:#058F62;margin-top:12px;">
         <div id="footer-enlaces">
           <h5>Enlaces útiles</h5>
