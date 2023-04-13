@@ -29,11 +29,6 @@ const productTable = {
     'big-project': 1200
 }
 
-
-//When you select any input field, add its value to const inputs.
-//If it changes the budget (product, time,extras) show it under "PRESUPUESTO FINAL"
-
-
 //show current values for form
 const showValues = () => {
     Object.keys(inputs).forEach(e => console.log(inputs[e]))
@@ -42,16 +37,47 @@ const showValues = () => {
 
 //this adds the input value to the corresponding object key
 Object.keys(inputs).forEach(e => {
-    $(`#${e}`).change(() => {inputs[e] = $(`#${e}`).val(); showValues()})
+    $(`#${e}`).change(() => {inputs[e] = $(`#${e}`).val()})
 })
 
 //this checks whether you accepted the privacy policy
-$('#t-and-c').click(() => {inputs.tAndC = !inputs.tAndC; showValues()})
+$('#t-and-c').click(() => {inputs.tAndC = !inputs.tAndC})
 
 //BUDGET LOGIC
 
 //add things to budget. They should show as you add or remove them
 //we just care about product, time and extras for budget
+
+//calculate total price
+const updatePrice = () => {
+
+    //group all prices here to sum later. Also resets list every time
+    const priceList = []
+
+    //select all prices. They go in "xxx€" format, so we have to split them before pushing them to the array
+    let prices = $('#pricing p')
+
+    for(let i=0; i<prices.length; i++){
+        let untrimmedPrice = prices[i].innerText
+        priceList.push(parseInt(untrimmedPrice.slice(0,-1)))
+    }
+
+    //finalPrice is the sum of all prices present
+    let finalPrice = priceList.reduce((a,b) => a + b, 0)
+
+    //we delete potential prior prices, then we add the newly calculated one
+    $('.fp').remove()
+    $('#total-price').append(`
+    <h3 class="fp" style="margin-top: 0; margin-right: 20px">
+    TOTAL:
+    </h3>
+    <span class="fp" style="padding-top:3px">
+     ${finalPrice} €
+     </span>`)
+    
+}
+
+
 
 //product
 $('#product').change(() => {
@@ -71,6 +97,7 @@ $('#product').change(() => {
     $('#concepts').append(`<p class="${value}">${label}</p>`)
     $('#pricing').append(`<p class="${value}">${productTable[value]}€</p>`)
 
+    updatePrice()
 })
 
 //extras
@@ -84,12 +111,16 @@ extras.forEach(elem => {
         if (inputs[elem]) {
             $('#concepts').append(`<p class="${elem}">Extra: ${$(`label[for=${elem}]`)[0].innerText}</p>`)
             $('#pricing').append(`<p class="${elem}">25€</p>`)
+            updatePrice()
         }
         else {
             $(`.${elem}`).remove()
+            updatePrice()
         }
         }
     )
+
+    
 })
 
 //deadline
@@ -108,12 +139,6 @@ $('#time, #period').change(() => {
     $('#concepts').append(`<p class="deadline">${inputs.time} ${inputs.period}</p>`)
     $('#pricing').append(`<p class="deadline">${price}€</p>`)
 
+    updatePrice()
 })
 
-
-//add price to budget like this:
-//
-
-//
-//let datePrice = number * parseInt(inputs.time) / dateTable[inputs.period]
-//number being the price that I charge for a day's work. Need a constant to make the slope less sharp
