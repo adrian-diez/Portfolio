@@ -40,7 +40,7 @@ Object.keys(inputs).forEach(e => {
     $(`#${e}`).change(() => {inputs[e] = $(`#${e}`).val()})
 })
 
-//this checks whether you accepted the privacy policy
+//this accetps/unaccepts the privacy policy
 $('#t-and-c').click(() => {inputs.tAndC = !inputs.tAndC})
 
 //BUDGET LOGIC
@@ -142,3 +142,50 @@ $('#time, #period').change(() => {
     updatePrice()
 })
 
+
+
+//VALIDATION
+
+//We're going to validate each field according to the constraints.
+//If there is something wrong, we'll continue the function but let the user know
+//If everything is correct, we will send the information somewhere
+
+const validateForm = () => {
+
+    //let's check first for empty fields. The fields that should be filled are:
+    // name, surname, phone, email, product, and time.
+    console.log(inputs)
+    if (inputs.name.length == 0
+        || inputs.surname.length == 0
+        || inputs.phone.length == 0
+        || inputs.email.length == 0
+        || inputs.product.length == 0
+        || inputs.time.length == 0
+        ) 
+        return alert('There\'s something missing!')
+
+    //if all the fields are filled, we validate each of them.
+
+    //VALIDATING NAME: CHARACTERS AND SPACES, UP TO 15 CHARS
+    const nameRegex = /^([a-zA-Z áéíóú]){1,15}$/
+
+    if (!nameRegex.test(inputs.name.trim())) return alert('Name is wrong!')
+
+    //VALIDATING SURNAME: CHARACTERS, SPACES AND DASHES, UP TO 40 CHARS
+    const surnameRegex = /^([a-zA-Z \-áéíóú]){1,40}$/
+
+    if (!surnameRegex.test(inputs.surname.trim())) return alert('Surname is wrong!')
+
+    //VALIDATING PHONE NUMBER: UP TO 9 DIGITS
+    const phoneRegex = /^\d{1,9}$/
+
+    if (!phoneRegex.test(inputs.phone.trim())) return alert('Phone number is wrong!')
+
+    //VALIDATING EMAIL: CORRECT FORMAT
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+    if(!emailRegex.test(inputs.email.trim())) return alert('Email is wrong!')
+
+    //VALIDATING TERMS AND CONDITIONS
+    if (!inputs.tAndC) return alert('Please read and accept our Terms and Conditions')
+}

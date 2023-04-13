@@ -13,7 +13,7 @@
 </head>
 <body style="margin:0">
     <header>
-      <div id="header" style="position:sticky; top:0; left:0; height:12.5%;display:flex;align-items: center; justify-content: space-between;padding:12px;background:#021C2C; color:#058F62">
+      <div id="header" style="position:fixed; width:98%; z-index: 3; top:0; left:0; height:12.5%;display:flex;align-items: center; justify-content: space-between;padding:12px;background:#021C2C; color:#058F62">
         <div id="logo">
           <div id="logo-wrapper">
             <a href="../index.html">
@@ -31,111 +31,113 @@
         </div>
       </div>
     </header>
-    <section id="contact-data">
-      <article id="contact-data-container" style="width:50vw;background:#021C2C;margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
-        <div id="title-container">
-          <h1>¿Quién eres?</h1>
-        </div>
-        <div id="contact-form-container" class="budget-form">
-          <form action="#">
-            <label for="name">Nombre</label>
-            <input type="text" id="name">
-            <br>
-            <label for="surname">Apellido</label>
-            <input type="text" id="surname">
-            <br>
-            <label for="phone">Teléfono</label>
-            <input type="tel" id="phone">
-            <br>
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email">
-          </form>
-        </div>
-      </article>
-    </section>
-    <section id="budget">
-      <article id="budget-container" style="width:50vw;background:#021C2C; margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
-        <div id="budget-title-container">
-          <h1>¿Qué necesitas?</h1>
-        </div>
-        <div id="budget-form-container" class="budget-form">
-          <form action="#">
-            <label for="product">Producto</label>
-            <select name="product" id="product">
-              <option value="default" selected disabled>Selecciona una opción</option>
-              <option value="bug-fix">Arreglar errores en mi código</option>
-              <option value="small-project">Crear un proyecto sencillo con HTML y CSS</option>
-              <option value="medium-project">Crear un proyecto sencillo con HTML,CSS y JavaScript/JQuery</option>
-              <option value="big-project">Crear un proyecto de más de una página</option>
-            </select>
-            <br>
-            <label for="time">Plazo</label>
-            <input type="number" id="time" style="width:2em; text-align: center;">
-            <select name="period" id="period">
-              <option value="days">días</option>
-              <option value="weeks">semanas</option>
-              <option value="months">meses</option>
-            </select>
-            <br>
-            <br>
-            <label for="extras">Extras</label>
-            <br>
-            <input type="checkbox" name="revisions" id="revisions">
-            <label for="revisions">Revisiones de contenido</label>
-            &emsp;
-            <input type="checkbox" name="meetings" id="meetings">
-            <label for="meetings">Reuniones diarias</label>
-            &emsp;
-            <input type="checkbox" name="documentation" id="documentation">
-            <label for="documentation">Realización de documentación</label>
-            <br>
-            <br>
-            <section id="budget-final" style="position:relative; color:#058F62; margin:2em; min-height:10em">
-              <h3 class="secondary-2">PRESUPUESTO FINAL</h3>
-              <div class="grid-container">
-                <div id="concepts" style="float:left">
-                  <h4>CONCEPTO</h4>
+    <section class="content-wrapper" style="margin-top:250px">
+      <section id="contact-data" >
+        <article id="contact-data-container" style="width:50vw;background:#021C2C;margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+          <div id="title-container">
+            <h1>¿Quién eres?</h1>
+          </div>
+          <div id="contact-form-container" class="budget-form">
+            <form action="#">
+              <label for="name">Nombre</label>
+              <input type="text" id="name">
+              <br>
+              <label for="surname">Apellido</label>
+              <input type="text" id="surname">
+              <br>
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone">
+              <br>
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email">
+            </form>
+          </div>
+        </article>
+      </section>
+      <section id="budget">
+        <article id="budget-container" style="width:50vw;background:#021C2C; margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+          <div id="budget-title-container">
+            <h1>¿Qué necesitas?</h1>
+          </div>
+          <div id="budget-form-container" class="budget-form">
+            <form action="#">
+              <label for="product">Producto</label>
+              <select name="product" id="product">
+                <option value="default" selected disabled>Selecciona una opción</option>
+                <option value="bug-fix">Arreglar errores en mi código</option>
+                <option value="small-project">Crear un proyecto sencillo con HTML y CSS</option>
+                <option value="medium-project">Crear un proyecto sencillo con HTML,CSS y JavaScript/JQuery</option>
+                <option value="big-project">Crear un proyecto de más de una página</option>
+              </select>
+              <br>
+              <label for="time">Plazo</label>
+              <input type="number" id="time" style="width:2em; text-align: center;">
+              <select name="period" id="period">
+                <option value="days">días</option>
+                <option value="weeks">semanas</option>
+                <option value="months">meses</option>
+              </select>
+              <br>
+              <br>
+              <label for="extras">Extras</label>
+              <br>
+              <input type="checkbox" name="revisions" id="revisions">
+              <label for="revisions">Revisiones de contenido</label>
+              &emsp;
+              <input type="checkbox" name="meetings" id="meetings">
+              <label for="meetings">Reuniones diarias</label>
+              &emsp;
+              <input type="checkbox" name="documentation" id="documentation">
+              <label for="documentation">Realización de documentación</label>
+              <br>
+              <br>
+              <section id="budget-final" style="position:relative; color:#058F62; margin:2em; min-height:10em">
+                <h3 class="secondary-2">PRESUPUESTO FINAL</h3>
+                <div class="grid-container">
+                  <div id="concepts" style="float:left">
+                    <h4>CONCEPTO</h4>
+                  </div>
+                  <div id="pricing" style="float:right">
+                    <h4>PRECIO</h4>
+                  </div>
+                  <div id="total-price">
+                  </div>
                 </div>
-                <div id="pricing" style="float:right">
-                  <h4>PRECIO</h4>
-                </div>
-                <div id="total-price">
-                </div>
+              </section>
+              <br>
+              <br>
+              <div style="display:inline-flex">
+                <input type="checkbox" name="t-and-c" id="t-and-c" style="display:block">
+                <label for="t-and-c">He leído y comprendo la <a style="color:var(--secondary-light-2)">política de privacidad</a>.</label>
               </div>
-            </section>
-            <br>
-            <br>
-            <div style="display:inline-flex">
-              <input type="checkbox" name="t-and-c" id="t-and-c" style="display:block">
-              <label for="t-and-c">He leído y comprendo la <a style="color:var(--secondary-light-2)">política de privacidad</a>.</label>
-            </div>
-            <br>
-            <br>
-            <button type="submit" class="cta-btn form-btn">Enviar formulario</button>
-          </form>
-        </div>
-      </article>
+              <br>
+              <br>
+              <button type="button" class="cta-btn form-btn" onclick="validateForm()">Enviar formulario</button>
+            </form>
+          </div>
+        </article>
+      </section>
+  
+      <section id="advert">
+        <article id="advert-container" style="width:35vw;position:absolute; top: 20em; right: -1em; background:#021C2C; margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
+          <div id="advert-title-container" style="text-align: center;">
+            <h1>¡Contrata mis servicios!</h1>
+          </div>
+          <section id="advert-desc">
+            <h3>Tengo una amplia selección de servicios a tu alcance.</h3>
+            <h3>Tan solo rellena el cuestionario de la izquierda y te responderé lo antes posible.</h3>
+  
+            <h2>¡Totalmente sin compromiso!</h2>
+  
+            <h2>¿A qué esperas?</h2>
+  
+            <h4>¿Aún no estás convencido o no sabes qué pedir?</h4>
+            <h3>Pásate por mi <a>galería de proyectos aquí</a>. Puede que algo te llame la atención.</h3>
+          </section>
+        </article>
+      </section>
+  
     </section>
-
-    <section id="advert">
-      <article id="advert-container" style="width:35vw;position:absolute; top: 10em; right: -1em; background:#021C2C; margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
-        <div id="advert-title-container" style="text-align: center;">
-          <h1>¡Contrata mis servicios!</h1>
-        </div>
-        <section id="advert-desc">
-          <h3>Tengo una amplia selección de servicios a tu alcance.</h3>
-          <h3>Tan solo rellena el cuestionario de la izquierda y te responderé lo antes posible.</h3>
-
-          <h2>¡Totalmente sin compromiso!</h2>
-
-          <h2>¿A qué esperas?</h2>
-
-          <h4>¿Aún no estás convencido o no sabes qué pedir?</h4>
-          <h3>Pásate por mi <a>galería de proyectos aquí</a>. Puede que algo te llame la atención.</h3>
-        </section>
-      </article>
-    </section>
-
     <footer>
       <div id="footer-container" style="width:100vw;display:flex;align-items: center; justify-content: space-around;padding:12px;background:#021C2C; color:#058F62;margin-top:12px;">
         <div id="footer-enlaces">
