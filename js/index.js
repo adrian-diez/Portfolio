@@ -43,6 +43,10 @@ Object.keys(inputs).forEach(e => {
 //this accetps/unaccepts the privacy policy
 $('#t-and-c').click(() => {inputs.tAndC = !inputs.tAndC})
 
+//trying special effect for pictures in index
+$(`.carousel-link:hover`).css('filter','none')
+
+
 //BUDGET LOGIC
 
 //add things to budget. They should show as you add or remove them
@@ -189,7 +193,7 @@ const validateForm = () => {
     if (!inputs.tAndC) return alert('Please read and accept our Terms and Conditions')
 
     //IF ALL VALIDATIONS PASS, SEND THE INFO TO A JSON
-
+    //.SERIALIZE?
     $.ajax({
         url : '../store/pedidos.json', // la URL para la petición
         data : `accion=guardar
