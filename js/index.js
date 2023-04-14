@@ -154,7 +154,6 @@ const validateForm = () => {
 
     //let's check first for empty fields. The fields that should be filled are:
     // name, surname, phone, email, product, and time.
-    console.log(inputs)
     if (inputs.name.length == 0
         || inputs.surname.length == 0
         || inputs.phone.length == 0
@@ -188,4 +187,32 @@ const validateForm = () => {
 
     //VALIDATING TERMS AND CONDITIONS
     if (!inputs.tAndC) return alert('Please read and accept our Terms and Conditions')
+
+    //IF ALL VALIDATIONS PASS, SEND THE INFO TO A JSON
+
+    $.ajax({
+        url : '../store/pedidos.json', // la URL para la petición
+        data : `accion=guardar
+        &nombre=${inputs.name}
+        &apellido=${inputs.surname}
+        &telefono=${inputs.phone}
+        &correo=${inputs.email}
+        &producto=${inputs.product}
+        &tiempo=${time} ${inputs.period}
+        `, // la información a enviar (extras cómo?)
+        type : 'POST', // especifica si será una petición POST o GET
+        // código a ejecutar si la petición es satisfactoria;
+        success : function(data) {
+            console.log(data)
+            if(data=='OK'){
+                alert('Guardado OK'); //se ha guardado el dato
+            } else{
+                alert('Error: '+data);//no se ha guardado el dato
+            }
+        },
+        // código a ejecutar si la petición falla;
+        error : function(xhr, status) {
+            alert('Disculpe, existió un problema');
+        },
+    });
 }

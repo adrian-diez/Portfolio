@@ -30,6 +30,18 @@ html{
   width: 99vw;
 }
 
+body {
+  background: transparent !important;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -51,7 +63,6 @@ label {
 .cta-btn {
   min-width: max-content;
   background: var(--secondary-light);
-  height: 25px;
   display: inline-block;
   padding: 5px;
   border-radius: 6px;
@@ -66,6 +77,18 @@ label {
 
 .form-btn {
   height: auto;
+}
+
+.w-80 {
+  width: 80%!important;
+}
+
+.w-60 {
+  width: 60%!important;
+}
+
+.center {
+  margin: 0 auto;
 }
 
 .slideshow {

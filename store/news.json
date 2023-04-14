@@ -1,0 +1,21 @@
+{
+    "news1": {
+        "title": "titulo de la noticia",
+        "subtitle": "subtitulo",
+        "body": "bleblebleblebel",
+        "url": "link"
+    },
+    "news2": {
+        "title": "titulo de la noticia",
+        "subtitle": "subtitulo",
+        "body": "bleblebleblebel",
+        "url": "link"
+    },
+    "news3": {
+        "title": "titulo de la noticia",
+        "subtitle": "subtitulo",
+        "body": "bleblebleblebel",
+        "url": "link"
+    },
+
+}
