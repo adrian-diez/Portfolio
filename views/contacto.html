@@ -7,8 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.css">
-  <title>Reboot Driver - Adrian Diez</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/map.js"></script>
+  <title>Adrian Diez - About</title>
+  
 </head>
 <body style="margin:0">
   <header>
@@ -34,7 +36,7 @@
   <section id="about-wrapper"  style="width:80vw;padding: 2rem;background:#021C2C;margin-left: 10vw;
   margin-top: 40px;box-shadow:-20px -20px 0px 0px #002e1fa3;color:#058F62">
     <h1 style="color:#0AC88A">Contacto</h1>
-
+    <div id="map" style="position:relative"></div>
   </section>
   <footer>
    
@@ -68,5 +70,8 @@
       
     </div>
   </footer>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqBTVwOoqfnQIIqvdNoxGoevuojxxjhRs&callback=initMap">
+  </script>
+
 </body>
 </html>
