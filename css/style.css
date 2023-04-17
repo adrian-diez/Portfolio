@@ -56,8 +56,16 @@ label {
   color:var(--secondary-light)
 }
 
-.secondary-2{
+.secondary-l-2{
   color: var(--secondary-light-2)
+}
+
+.secondary-l {
+  color: var(--secondary-light)
+}
+
+.header-tag{
+  text-decoration: none;
 }
 
 .cta-btn {
