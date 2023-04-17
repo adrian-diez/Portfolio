@@ -1,3 +1,35 @@
+//load news
+const cargarNoticia = () => {
+    console.log('this gets in')
+    $.ajax({
+        url: "store/news.json",
+        type: "GET",
+        success(data) {
+            let res = ""
+
+            //We get a random piece of news every time
+            const len = Object.keys(data).length
+            const randomNum = Math.floor(Math.random()*len)
+            const randomNews = data[Object.keys(data)[randomNum]]
+
+            res += `<h1 style="color:#0AC88A">Tech news</h1><br>`
+            res += `<h2 id="news-title" style="color:#0AC88A">${randomNews.title}</h2><br>`
+            res += `<h4 id="news-subtitle">${randomNews.subtitle}<br></h4>`
+            res += `<p>${randomNews.body}</p>`
+            res += `<a target="blank_" href="${randomNews.url}"> <div class="cta-btn" style="color:#000">Leer más</div> </a>`
+
+            console.log(res)
+
+            $('#news').html(res)
+
+        },
+        error(xhr, status) {
+            console.log(xhr, status)
+            alert('Problema')
+        }
+    })
+}
+
 //the list of inputs filled. There should be 7 plus extras
 const inputs = {
     name: '',

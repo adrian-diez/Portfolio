@@ -1,21 +1,21 @@
 {
     "news1": {
-        "title": "titulo de la noticia",
-        "subtitle": "subtitulo",
-        "body": "bleblebleblebel",
-        "url": "link"
+        "title": "El proyecto Tempest recibe nuevo impulso: €700 millones más para el avión del futuro",
+        "subtitle": "Un caza que incorporará IA, vuelo con drones, armas de energía dirigida, cabina virtual en el casco y misiles hipersónicos.",
+        "body": "Se trata sin duda de uno de los proyectos más interesantes y complejos del último lustro en tecnología militar: TEMPEST, un caza a reacción de sexta generación que ha recibido un nuevo impulso por parte del Ministerio de Defensa del Reino Unido: una extensión del contrato por valor de unos €700 millones.",
+        "url": "https://www.larazon.es/tecnologia/proyecto-tempest-avion-futuro_20230416643c35c41b5f5b00014c9c5b.html"
     },
     "news2": {
-        "title": "titulo de la noticia",
-        "subtitle": "subtitulo",
-        "body": "bleblebleblebel",
-        "url": "link"
+        "title": "Cuidado con lo que hablas con ChatGPT: 4 consejos a tener en cuenta para evitar problemas",
+        "subtitle": "Pese a los grandes beneficios de ChatGPT, este chatbot basado en inteligencia artificial te podría meter en algún que otro problema si no tienes en cuenta ciertos aspectos al hablar con él.",
+        "body": "Como ya sabes, ChatGPT ha llegado para quedarse y ha roto por completo los esquemas de miles de personas que diariamente usan este chatbot para todo tipo de actividades, mejorando sus capacidades.",
+        "url": "https://computerhoy.com/tecnologia/cuidado-hablas-chatgpt-4-consejos-tener-cuenta-evitar-problemas-1231414"
     },
     "news3": {
-        "title": "titulo de la noticia",
-        "subtitle": "subtitulo",
-        "body": "bleblebleblebel",
-        "url": "link"
-    },
+        "title": "TikTok: cómo es Douyin, la versión de la app en China (y en qué se diferencia de la occidental)",
+        "subtitle": "En septiembre se produce el esperado lanzamiento. La han llamado Douyin y en menos de un año alcanzará más de 100 millones de usuarios.",
+        "body": "Pero ¿qué más sabemos sobre Douyin?, ¿y cómo se diferencia de TikTok?",
+        "url": "https://www.bbc.com/mundo/noticias-65126139"
+    }
 
 }

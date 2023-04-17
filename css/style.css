@@ -124,23 +124,23 @@ label {
 
 
 .slideshow li:nth-child(1) span { 
-    background-image: url("../images/profile-pic.jpg"); 
+  background-image: url("../images/profile-pic.jpg"); 
 }
 .slideshow li:nth-child(2) span { 
-    background-image: url("../images/products/reboot-driver.png");
-    animation-delay: 6s; 
+  background-image: url("../images/products/reboot-driver.png");
+  animation-delay: 6s; 
 }
 .slideshow li:nth-child(3) span { 
-    background-image: url("../images/code.png");
-    animation-delay: 12s; 
+  background-image: url("../images/code.png");
+  animation-delay: 12s; 
 }
 .slideshow li:nth-child(4) span { 
-    background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5bfa14d04ae3429879830ee4_home-hero.jpg");   
-    animation-delay: 18s; 
+  background-image: url("../images/products/warren-giftshop.png");
+  animation-delay: 18s; 
 }
 .slideshow li:nth-child(5) span { 
-    background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9963ea913260bb41b0e_powerlines.jpg");
-    animation-delay: 24s; 
+  background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9963ea913260bb41b0e_powerlines.jpg");
+  animation-delay: 24s; 
 }
 
 
