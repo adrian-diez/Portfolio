@@ -40,6 +40,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  color: var(--secondary-light-2);
 }
 
 input::-webkit-outer-spin-button,
@@ -237,6 +238,7 @@ label {
 
 section:nth-child(2n+1){
   width:80vw;
+  padding: 2rem;
   background:#021C2C;
   margin-right: 10vw;
   margin-top: 40px;
@@ -251,6 +253,27 @@ section:nth-child(2n+2){
   margin-top: 40px;
   box-shadow:-20px -20px 0px 0px #002e1fa3;
   color:#058F62
+}
+
+#card-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  background: var(--secondary-dark);
+  padding: 1rem;
+}
+
+.card-title {
+  color: var(--secondary-light-2);
+  margin-bottom: 1.25rem;
+}
+
+.card-text {
+  color: var(--secondary-light);
+  font-size: medium;
 }
 
 #map {
