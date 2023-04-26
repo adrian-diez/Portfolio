@@ -235,6 +235,24 @@ label {
   justify-content: end;
 }
 
+section:nth-child(2n+1){
+  width:80vw;
+  background:#021C2C;
+  margin-right: 10vw;
+  margin-top: 40px;
+  box-shadow:-20px -20px 0px 0px #002e1fa3;
+}
+
+section:nth-child(2n+2){
+  width:80vw;
+  padding: 2rem;
+  background:#021C2C;
+  margin-left: 10vw;
+  margin-top: 40px;
+  box-shadow:-20px -20px 0px 0px #002e1fa3;
+  color:#058F62
+}
+
 #map {
   width: 1000px;
   height: 500px;
