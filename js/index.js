@@ -12,8 +12,8 @@ const cargarNoticia = () => {
             const randomNum = Math.floor(Math.random()*len)
             const randomNews = data[Object.keys(data)[randomNum]]
 
-            res += `<h1 style="color:#0AC88A">Tech news</h1><br>`
-            res += `<h2 id="news-title" style="color:#0AC88A">${randomNews.title}</h2><br>`
+            res += `<h1>Tech news</h1><br>`
+            res += `<h2 id="news-title">${randomNews.title}</h2><br>`
             res += `<h4 id="news-subtitle">${randomNews.subtitle}<br></h4>`
             res += `<p>${randomNews.body}</p>`
             res += `<a target="blank_" href="${randomNews.url}"> <div class="cta-btn" style="color:#000">Leer más</div> </a>`

@@ -36,6 +36,8 @@ body {
 
 h1 {
   font-size: 2rem;
+  color: var(--secondary-light-2);
+
 }
 
 h2 {
@@ -236,7 +238,7 @@ label {
   justify-content: end;
 }
 
-section:nth-child(2n+1){
+#index > section:nth-child(2n+1){
   width:80vw;
   padding: 2rem;
   background:#021C2C;
@@ -245,7 +247,7 @@ section:nth-child(2n+1){
   box-shadow:-20px -20px 0px 0px #002e1fa3;
 }
 
-section:nth-child(2n+2){
+#index > section:nth-child(2n+2){
   width:80vw;
   padding: 2rem;
   background:#021C2C;
