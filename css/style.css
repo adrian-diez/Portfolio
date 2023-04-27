@@ -238,7 +238,7 @@ label {
   justify-content: end;
 }
 
-#index > section:nth-child(2n+1){
+:is(#index, #contacto) > section:nth-child(2n+1){
   width:80vw;
   padding: 2rem;
   background:#021C2C;
@@ -247,7 +247,7 @@ label {
   box-shadow:-20px -20px 0px 0px #002e1fa3;
 }
 
-#index > section:nth-child(2n+2){
+:is(#index, #contacto) > section:nth-child(2n+2){
   width:80vw;
   padding: 2rem;
   background:#021C2C;
@@ -279,6 +279,11 @@ label {
 }
 
 #map {
-  width: 1000px;
+  width: 800px;
   height: 500px;
+  margin-right: 25px;
+}
+
+#panel {
+  background: #fff;
 }

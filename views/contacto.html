@@ -36,18 +36,45 @@
     </div>
   </header>
   
-  <section id="about-wrapper"  style="width:80vw;padding: 2rem;background:#021C2C;margin-left: 10vw;
+  <main id="contacto">
+    <section>
+      <h1>Contacto</h1>
+      <div class="card" style="margin:0 10%;">
+        <h4 class="card-title">
+          Datos de contacto
+        </h4>
+        <h5 class="card-text">
+          Teléfono: +34 686706762<br>
+          Email: adrian.dieztefano@gmail.com<br>
+          Linkedin: /adrian-diez-gp<br>
+          GitHub: /adrian-diez
+        </h5>
+      </div>
+      <div class="card" style="margin:0 50%;">
+        <h4 class="card-title">
+          Dirección
+        </h4>
+        <h5 class="card-text">
+          Avenida Príncipes de Asturias, 7<br>
+          Villaviciosa de Odón<br>
+          28670 Madrid
+        </h5>
+      </div>
+    </section>
+    <section id="about-wrapper"  style="width:80vw;height:80vh; padding: 2rem;background:#021C2C;margin-left: 10vw;
   margin-top: 40px;box-shadow:-20px -20px 0px 0px #002e1fa3;color:#058F62">
-    <h1 style="color:#0AC88A">Contacto</h1>
+    <h1 style="color:#0AC88A">Cómo llegar</h1>
     <div style="margin-bottom:20px">
       <input type="text" id="address" placeholder="Escribe tu dirección aquí">
       <input type="button" value="Hallar dirección" onclick="codeAddress()">
       <input type="button" id="route-btn" value="Calcular ruta"  style="display:none" onclick="calculateRoute()">
     </div>
-    <div id="map" style="position:relative"></div>
-  </section>
+    <div id="map" style="position:relative;float:left;"></div>
+    <div id="panel" style="position:relative;float:left;width:250px; "></div>
+    </section>
+  </main>
+  
   <footer>
-   
     <div id="footer-container" style="width:100vw;display:flex;align-items: center; justify-content: space-around;padding:12px;background:#021C2C; color:#058F62;margin-top:12px;">
       <div id="footer-enlaces">
         <h5>Enlaces útiles</h5>

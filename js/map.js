@@ -66,6 +66,7 @@ function calculateRoute () {
   routeService = new google.maps.DirectionsService(); 
   directionsRenderer = new google.maps.DirectionsRenderer();
   directionsRenderer.setMap(map)
+  directionsRenderer.setPanel(panel)
 
 
   const destino = {lat: 40.352, lng: -3.894};  
