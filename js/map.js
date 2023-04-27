@@ -53,6 +53,7 @@ function codeAddress () {
 
       map.setZoom(15);
       map.setCenter(results[0].geometry.location);
+      $('#route-btn')[0].style.display = 'inline'
 
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
@@ -78,7 +79,6 @@ function calculateRoute () {
 
   routeService.route(opciones, function(response, status) { 
       if (status == google.maps.DirectionsStatus.OK) { 
-        console.log(response)
         directionsRenderer.setDirections(response); }     
       });
 }
