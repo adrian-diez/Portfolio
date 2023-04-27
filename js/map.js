@@ -73,7 +73,7 @@ function calculateRoute () {
   const destino = {lat: 40.352, lng: -3.894};  
 
   //SET ORIGIN AS LAST MARKER ON MAP, TRAVEL MODE AS DRIVING
-  var opciones = { 
+  const opciones = { 
       origin:map.center,  
       destination:destino, 
       travelMode: google.maps.DirectionsTravelMode.DRIVING 
@@ -82,6 +82,8 @@ function calculateRoute () {
   //RENDER DIRECTIONS ON SCREEN
   routeService.route(opciones, function(response, status) { 
       if (status == google.maps.DirectionsStatus.OK) { 
-        directionsRenderer.setDirections(response); }     
+        directionsRenderer.setDirections(response); 
+        $('#panel')[0].style.height = '500px';
+        }     
       });
 }
