@@ -187,6 +187,8 @@ $('#time, #period').change(() => {
 //If everything is correct, we will send the information somewhere
 
 const validateForm = () => {
+    
+    const errors = []
 
     //let's check first for empty fields. The fields that should be filled are:
     // name, surname, phone, email, product, and time.
@@ -196,59 +198,37 @@ const validateForm = () => {
         || inputs.email.length == 0
         || inputs.product.length == 0
         || inputs.time.length == 0
-        ) 
-        return alert('There\'s something missing!')
+        )
+        errors.push('Comprueba que has rellenado todos los datos.\n')
 
     //if all the fields are filled, we validate each of them.
 
     //VALIDATING NAME: CHARACTERS AND SPACES, UP TO 15 CHARS
     const nameRegex = /^([a-zA-Z áéíóú]){1,15}$/
 
-    if (!nameRegex.test(inputs.name.trim())) return alert('Name is wrong!')
+    if (!nameRegex.test(inputs.name.trim())) errors.push('El formato del nombre no es correcto. Escribe tu nombre sin guiones.\n')
 
     //VALIDATING SURNAME: CHARACTERS, SPACES AND DASHES, UP TO 40 CHARS
     const surnameRegex = /^([a-zA-Z \-áéíóú]){1,40}$/
 
-    if (!surnameRegex.test(inputs.surname.trim())) return alert('Surname is wrong!')
+    if (!surnameRegex.test(inputs.surname.trim())) errors.push('El formato del apellido no es correcto.\n')
 
     //VALIDATING PHONE NUMBER: UP TO 9 DIGITS
     const phoneRegex = /^\d{1,9}$/
 
-    if (!phoneRegex.test(inputs.phone.trim())) return alert('Phone number is wrong!')
+    if (!phoneRegex.test(inputs.phone.trim())) errors.push('El formato del teléfono no es correcto. Escribe tu número sin espacios ni código de país.\n')
 
     //VALIDATING EMAIL: CORRECT FORMAT
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-    if(!emailRegex.test(inputs.email.trim())) return alert('Email is wrong!')
+    if(!emailRegex.test(inputs.email.trim())) errors.push('El formato del email no es correcto.\n')
 
     //VALIDATING TERMS AND CONDITIONS
-    if (!inputs.tAndC) return alert('Please read and accept our Terms and Conditions')
+    if (!inputs.tAndC) errors.push('Por favor, lee y acepta los Términos y Condiciones.\n')
 
-    //IF ALL VALIDATIONS PASS, SEND THE INFO TO A JSON
-    //.SERIALIZE?
-    $.ajax({
-        url : '../store/pedidos.json', // la URL para la petición
-        data : `accion=guardar
-        &nombre=${inputs.name}
-        &apellido=${inputs.surname}
-        &telefono=${inputs.phone}
-        &correo=${inputs.email}
-        &producto=${inputs.product}
-        &tiempo=${time} ${inputs.period}
-        `, // la información a enviar (extras cómo?)
-        type : 'POST', // especifica si será una petición POST o GET
-        // código a ejecutar si la petición es satisfactoria;
-        success : function(data) {
-            console.log(data)
-            if(data=='OK'){
-                alert('Guardado OK'); //se ha guardado el dato
-            } else{
-                alert('Error: '+data);//no se ha guardado el dato
-            }
-        },
-        // código a ejecutar si la petición falla;
-        error : function(xhr, status) {
-            alert('Disculpe, existió un problema');
-        },
-    });
+    //RETURN ALL ERRORS IN A SINGLE ALERT
+    if (errors.length > 0) return alert([...errors].join('').replaceAll(',',''))
+
+    //IF ALL VALIDATIONS PASS, SEND ALERT
+    alert('¡Tu formulario se ha enviado! En breve recibirás tu respuesta.')
 }

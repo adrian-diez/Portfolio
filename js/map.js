@@ -35,22 +35,22 @@ function initMap() {
 
 }
 
-function test () {
-  console.log('click works')
-  return
-}
-
 function codeAddress () {
-  console.log('codeAddress starting...')
+
+  //GET ADDRESS FROM INPUT
   const address = $("#address").val();
+
+  //GET LOCATION FROM ADDRESS
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == 'OK') {
       
+      //CREATE A MARKER IN NEW POSITION
       new google.maps.Marker({
         map: map,
         position: results[0].geometry.location
       });
 
+      //SET MAP IN NEW POSITION
       map.setZoom(15);
       map.setCenter(results[0].geometry.location);
       $('#route-btn')[0].style.display = 'inline'
@@ -63,21 +63,23 @@ function codeAddress () {
 
 function calculateRoute () {
 
+  //INITIALIZE NECESSARY SERVICES
   routeService = new google.maps.DirectionsService(); 
   directionsRenderer = new google.maps.DirectionsRenderer();
   directionsRenderer.setMap(map)
   directionsRenderer.setPanel(panel)
 
-
+  //SET MY ADDRESS AS DESTINATION
   const destino = {lat: 40.352, lng: -3.894};  
 
+  //SET ORIGIN AS LAST MARKER ON MAP, TRAVEL MODE AS DRIVING
   var opciones = { 
       origin:map.center,  
       destination:destino, 
       travelMode: google.maps.DirectionsTravelMode.DRIVING 
-      //indicamos en este caso que hacemos el viaje en coche/moto     
   };     
 
+  //RENDER DIRECTIONS ON SCREEN
   routeService.route(opciones, function(response, status) { 
       if (status == google.maps.DirectionsStatus.OK) { 
         directionsRenderer.setDirections(response); }     
