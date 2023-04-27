@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/index.js" defer></script>
+    <title>Adrian Diez - Presupuesto</title>
 </head>
 <body style="margin:0">
     <header>
-      <div id="header" style="position:fixed; width:98%; z-index: 3; top:0; left:0; height:12.5%;display:flex;align-items: center; justify-content: space-between;padding:12px;background:#021C2C; color:#058F62">
+      <div id="header" style="position:fixed; width:98%; z-index: 3; top:0; left:0; height:10%;display:flex;align-items: center; justify-content: space-between;padding:12px;background:#021C2C; color:#058F62">
         <div id="logo">
           <div id="logo-wrapper">
             <a href="../index.html">
@@ -23,20 +24,21 @@
         </div>
         <div id="navbar">
           <ul style="display: flex; flex-direction: row; list-style-type: none; gap:10px;">
-            <li>Home</li>
-            <li>Work</li>
-            <li>About</li>
+            <li><a href="../index.html" class="header-tag secondary-l">Home</a></li>
+            <li><a href="galeria.html" class="header-tag secondary-l-2"><strong>Work</strong></a></li>
+            <li><a href="contacto.html" class="header-tag secondary-l">About</a></li>
             <li style="color:var(--secondary-light-2)"><strong>Presupuesto</strong></li>
           </ul>
   
         </div>
       </div>
     </header>
-    <section class="content-wrapper" style="margin-top:250px">
-      <section id="contact-data" >
+    <div class="content-wrapper" style="margin-top:150px">
+      <section id="contact-data" > 
+        <h2 style="color:transparent; display:inline;">Datos de contacto</h2>
         <article id="contact-data-container" style="width:50vw;background:#021C2C;margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
           <div id="title-container">
-            <h1>¿Quién eres?</h1>
+            <h2>¿Quién eres?</h2>
           </div>
           <div id="contact-form-container" class="budget-form">
             <form action="#">
@@ -56,9 +58,10 @@
         </article>
       </section>
       <section id="budget">
+        <h2 style="color:transparent; display:inline;">Presupuesto</h2>
         <article id="budget-container" style="width:50vw;background:#021C2C; margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
           <div id="budget-title-container">
-            <h1>¿Qué necesitas?</h1>
+            <h2>¿Qué necesitas?</h2>
           </div>
           <div id="budget-form-container">
             <form action="#" id="budget-form">
@@ -80,7 +83,7 @@
               </select>
               <br>
               <br>
-              <label for="extras">Extras</label>
+              <label>Extras</label>
               <br>
               <input type="checkbox" name="revisions" id="revisions">
               <label for="revisions">Revisiones de contenido</label>
@@ -120,9 +123,10 @@
       </section>
   
       <section id="advert">
+        <h2 style="color:transparent; display:inline;">Anuncio</h2>
         <article id="advert-container" style="width:35vw;position:absolute; top: 20em; right: -1em; background:#021C2C; margin:40px;box-shadow:-20px -20px 0px 0px #002e1fa3;">
           <div id="advert-title-container" style="text-align: center;">
-            <h1>¡Contrata mis servicios!</h1>
+            <h2 style="font-size: 1.75rem;">¡Contrata mis servicios!</h2>
           </div>
           <section id="advert-desc">
             <h3>Tengo una amplia selección de servicios a tu alcance.</h3>
@@ -138,7 +142,7 @@
         </article>
       </section>
   
-    </section>
+    </div>
     <footer>
       <div id="footer-container" style="width:100vw;display:flex;align-items: center; justify-content: space-around;padding:12px;background:#021C2C; color:#058F62;margin-top:12px;">
         <div id="footer-enlaces">
