@@ -1,5 +1,7 @@
 let map;
 let geocoder;
+let routeService;
+let directionsRenderer;
 
 function initMap() {
   const options = {}
@@ -31,21 +33,52 @@ function initMap() {
   //ATTACHING A TEXTBOX TO A MARKER
   google.maps.event.addListener(mark1, 'click', () => {textbox1.open(map,mark1)})
 
-
-  
 }
-function codeAddress() {
+
+function test () {
+  console.log('click works')
+  return
+}
+
+function codeAddress () {
+  console.log('codeAddress starting...')
   const address = $("#address").val();
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == 'OK') {
-      console.log(results.slice(0,3))
-
+      
       new google.maps.Marker({
         map: map,
         position: results[0].geometry.location
       });
+
+      map.setZoom(15);
+      map.setCenter(results[0].geometry.location);
+
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
+}
+
+function calculateRoute () {
+
+  routeService = new google.maps.DirectionsService(); 
+  directionsRenderer = new google.maps.DirectionsRenderer();
+  directionsRenderer.setMap(map)
+
+
+  const destino = {lat: 40.352, lng: -3.894};  
+
+  var opciones = { 
+      origin:map.center,  
+      destination:destino, 
+      travelMode: google.maps.DirectionsTravelMode.DRIVING 
+      //indicamos en este caso que hacemos el viaje en coche/moto     
+  };     
+
+  routeService.route(opciones, function(response, status) { 
+      if (status == google.maps.DirectionsStatus.OK) { 
+        console.log(response)
+        directionsRenderer.setDirections(response); }     
+      });
 }

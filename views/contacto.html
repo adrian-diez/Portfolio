@@ -39,8 +39,11 @@
   <section id="about-wrapper"  style="width:80vw;padding: 2rem;background:#021C2C;margin-left: 10vw;
   margin-top: 40px;box-shadow:-20px -20px 0px 0px #002e1fa3;color:#058F62">
     <h1 style="color:#0AC88A">Contacto</h1>
-    <input type="text" id="address" placeholder="Escribe tu dirección aquí">
-    <input type="button" value="Calcular ruta" onclick="codeAddress()">
+    <div style="margin-bottom:20px">
+      <input type="text" id="address" placeholder="Escribe tu dirección aquí">
+      <input type="button" value="Direccion" onclick="codeAddress()">
+      <input type="button" value="Calcular ruta" onclick="calculateRoute()">
+    </div>
     <div id="map" style="position:relative"></div>
   </section>
   <footer>
